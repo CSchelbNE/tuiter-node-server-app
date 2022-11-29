@@ -1,6 +1,7 @@
 import * as tuitsDao from "../../tuits/tuits-dao.js"
-import posts from "./tuits.js";
-let tuits = posts;
+
+
+
 
 const createTuit =  async (req, res) => {
     const newTuit = req.body;
@@ -39,3 +40,4 @@ export default (app) => {
     app.put('/api/tuits/:tid', updateTuit);
     app.delete('/api/tuits/:tid', deleteTuit);
 }
+
