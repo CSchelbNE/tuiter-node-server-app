@@ -21,9 +21,8 @@ const findTuits  = async (req, res) => {
 }
 const updateTuit = async (req, res) => {
     const updates = req.body;
-    console.log("THE VALUE IS" +updates._id)
     const status = await tuitsDao.updateTuit(updates._id, updates);
-    res.json(status);
+    res.json(updates);
 }
 
 const deleteTuit = async (req, res) => {
